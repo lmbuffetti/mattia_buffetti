@@ -1,0 +1,227 @@
+#projectList {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    @media (max-width: 1440px) {
+      width: 33.33%;
+    }
+    @media (max-width: 767px) {
+      width: 50%;
+    }
+    @media (max-width: 767px) {
+      width: 50%;
+    }
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+    position: relative;
+    @include animate_new(all, .5s);
+    .hoverText {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      @media (min-width: 1025px) {
+        height: 0;
+        padding: 0px;
+      }
+      overflow: hidden;
+      background: rgba(42,33,94,.7);
+      display: flex;
+      text-align: center;
+      vertical-align: middle;
+      align-content: center;
+      align-items: center;
+      @include animate_new(all, .5s);
+      h3 {
+        display: block;
+        vertical-align: middle;
+        text-align: center;
+        align-content: center;
+        margin: auto;
+        color: #FFF;
+        text-shadow: 0 0 1px #000;
+        font-size: 20px;
+        @media (max-width: 1024px) {
+          font-size: 16px;
+        }
+        @media (max-width: 970px) {
+          font-size: 10px;
+        }
+        @media (max-width: 767px) {
+          font-size: 14px;
+        }
+        @media (max-width: 650px) {
+          font-size: 10px;
+        }
+        @media (max-width: 500px) {
+          font-size: 14px;
+        }
+        @media (max-width: 400px) {
+          font-size: 10px;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      &:hover {
+        .hoverText {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+#projectDetail {
+  .mac {
+    @include dimension_desk();
+    overflow: hidden;
+    margin: auto;
+    div {
+      @include zoom-transform-def();
+    }
+    iframe {
+      background: url('../../img/imac.png');
+      @include dimension_desk();
+      @include padding_desk();
+      @include zoom_desk();
+      background-size: contain;
+      border: none;
+    }
+  }
+  .mobile {
+    width: 235px;
+    height: 489px;
+    @media (max-width:400px) {
+      width: 175px;
+      height: 366px;
+    }
+    overflow: hidden;
+    margin: auto;
+    div {
+      @include zoom-transform(.5, .5, top, left);
+    }
+    iframe {
+      zoom: 2;
+      background: url('../../img/iphone.png');
+      width: 235px;
+      height: 489px;
+      padding: 70px 15px 60px;
+      @media (max-width:400px) {
+        width: 175px;
+        height: 366px;
+        padding: 50px 10px 50px;
+      }
+      background-size: contain;
+      border: none;
+    }
+  }
+}
+#navTab {
+  margin-bottom: 35px;
+  ul {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      width: 33.33%;
+      font-size: 12px;
+      a {
+        background: transparent;
+        border: 1px solid #2a215e;
+        border-right: none;
+        display: block;
+        padding: 5px;
+        width: 100%;
+        color: #2a215e;
+        text-decoration: none;
+        text-align: center;
+        &:hover, &.active {
+          color: #FFF;
+          background: #2a215e;
+        }
+      }
+      &:last-child {
+        a {
+          border-right: 1px solid #2a215e;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  #about {
+    #navTab {
+      margin-bottom: 35px;
+      ul {
+        li {
+          width: 100%;
+          a {
+            border: 1px solid #2a215e;
+            border-bottom: none;
+          }
+          &:last-child {
+            a {
+              border-bottom: 1px solid #2a215e;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#navTabIframe {
+  margin-bottom: 35px;
+  ul {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      width: 50%;
+      font-size: 12px;
+      button {
+        background: transparent;
+        border: 1px solid #000;
+        border-right: none;
+        display: block;
+        padding: 5px;
+        width: 100%;
+        color: #000;
+        text-decoration: none;
+        text-align: center;
+        &.active {
+          background: #2a215e;
+          color: #FFF
+        }
+      }
+      &:last-child {
+        button {
+          border-right: 1px solid #000;
+        }
+      }
+    }
+  }
+}
+#contentTab {
+  padding: 0 5px;
+}
+#contentTabMax {
+  padding: 0 5px;
+  @media (min-width: 992px) {
+    max-height: calc(100vh - 150px);
+    overflow: auto;
+    padding-right: 15px;
+  }
+}
+#btnStore {
+  text-align: center;
+  margin-top: 65px;
+}

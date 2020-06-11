@@ -1,0 +1,80 @@
+@mixin input() {
+  color:#999;
+}
+@mixin input_focus() {
+  opacity: 0;
+}
+
+#contact {
+  h2 {
+    margin-bottom: 20px;
+  }
+  form {
+    label {
+      display: none;
+    }
+    input[type="text"],input[type="email"], textarea {
+      font-family: 'Montserrat', sans-serif;
+      background: #eee;
+      border:1px solid #CCC;
+      box-shadow: none;
+      width: 100%;
+      max-width: 600px;
+      padding: 10px 5px;
+      &:focus {
+        border-color: #999;
+      }
+    }
+    button, button:visited {
+      border: none;
+      background: #9490AE;
+      text-transform: uppercase;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px 5px;
+      color: #FFF;
+      max-width: 600px;
+      &:hover, &:focus, &:active {
+        background: #2A215E;
+      }
+    }
+    div.sendForm {
+      div {
+        text-align: center;
+        &.success {
+          padding: 10px;
+          border: 1px solid green;
+        }
+        &.error {
+          padding: 10px;
+          border: 1px solid red;
+        }
+      }
+    }
+  }
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  @include input();
+}
+::-moz-placeholder { /* Firefox 19+ */
+  @include input();
+}
+:-ms-input-placeholder { /* IE 10+ */
+  @include input();
+}
+:-moz-placeholder { /* Firefox 18- */
+  @include input();
+}
+:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  @include input_focus();
+}
+:focus::-moz-placeholder { /* Firefox 19+ */
+  @include input_focus();
+}
+:focus:-ms-input-placeholder { /* IE 10+ */
+  @include input_focus();
+}
+:focus:-moz-placeholder { /* Firefox 18- */
+  @include input_focus();
+}
