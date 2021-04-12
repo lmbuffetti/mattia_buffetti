@@ -9,14 +9,16 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { withRouter } from 'react-router-dom';
 import { frontloadConnect } from 'react-frontload';
-import { getProjectDetail } from '../middlewares/ContentMiddleware';
+import { getProjectDetail, setProjectsList } from '../middlewares/ContentMiddleware';
 import { setWindow } from '../middlewares/CommonMiddleware';
 
 const striptags = require('striptags');
 
 const frontload = async (props) => {
 	try {
-		if (!props.translation) {
+		console.log(props.project);
+		console.log('cazzo');
+		if (!props.project.loaded) {
 			const id = get(props, 'match.params.number', 0);
 			await props.getProjectDetail(id, props.projects);
 		}
@@ -41,10 +43,26 @@ const Project = (props) => {
 	const img = project.image ? require('../gallery/' + project.image) : '';
 
 	useEffect(() => {
-		if (projects) {
+		return () => {
+			props.setProjectsList();
+		}
+	}, [])
+
+	useEffect(() => {
+		console.log(project);
+		if (projects && !project.loaded) {
 			props.getProjectDetail(projID, projects);
 		}
+		if (project.loaded && !project.ID) {
+			console.log('test');
+		}
 	}, [projects, projID]);
+
+	useEffect(() => {
+		if (project.loaded && !project.ID) {
+			history.push('/')
+		}
+	}, [project])
 
 	return (
 		<div style={{minHeight: windowSize.minHeight}}>
@@ -112,6 +130,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
 	getProjectDetail,
+	setProjectsList,
 };
 
 

@@ -37,13 +37,6 @@ const serverConfig = {
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 1,
     }),
-    new PurgecssPlugin({
-      paths: [
-        ...glob.sync(`${BUILD_DIR}/**/*`,  { nodir: true }),
-        ...glob.sync(`${ROOT_DIR}/src/**/**/*`,  { nodir: true }),
-      ],
-      rejected: true,
-    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],

@@ -89,17 +89,6 @@ export const Projects = {
       "type":"website"
     },
     {
-      "ID":8,
-      "title":"Dr. Carlo Graziani",
-      "description":"<p>For the homepage the slide was realized using the plugin revslider, under it the carousel is a slide of news headings. For the sections of aestethic treatments, functional treatments, images and videos, the admin panel was modified adding the same section to each so they are easier to manage.</p><p>On the homepage I added a menu that is visible when the mouse is over the image or treatment headings. In this menu there is a list of all treatments.</p><p>For detail of the treatments, I added in the admin panel the possibility to indicate the type, area, anesthesia, surgery length, recovery time, rehabilitation time, the last three are shown by a graph to make it easier to read.</p><p>The dropdown menu “Read more” automatically shows the last 4 news items. The site is responsive and it even works on Explorer 8.</p><p>Graphic/Art Direction: Leo Leonardi</p>",
-      "tasks":"<p>Dr. Graziani is an eye-facial surgeon. Oculoplastic surgery is a highly specialised branch of ophthalmology that includes the plastic, reconstructive and aesthetic treatment of eyelids, lacrimal ducts, orbit and face. Dr. Graziani keeps up to date with latest developments in the field through international surgical training.</p>",
-      "skills":"<li>Wordpress</li><li>CSS</li><li>PHP</li><li>jQuery</li><li>Ajax</li>",
-      "link":"https://oculoplastica.it/",
-      "image":"carlo-graziani-oculoplastica-luigi-mattia-buffetti-web-developer.jpg",
-      "url":"dr-carlo-graziani-oculoplastico",
-      "type":"website"
-    },
-    {
       "ID":9,
       "title":"Social Media Expo 2015",
       "description":`<p>I present a support to develop for different platform for Social Media. I create template for Wordpress and Tumblr, I create an ad hoc platform. Also I provide support to the trainees who make their experience at the Milan Triennale.</p><p>I developed the showcase website using Wordpress and then I created other platform to help users to know everything of Expo2015.<p>I develoed:</p><ul><li>100thingstodo</li><li>Bioparcosocialmediaday</li><li>Expogram</li><li>Expoinviaggio</li><li>Expolibris</li>moldor</li><li>Socialmediaday</li><li>Todoexpo</li><li>Template for Tumblr</li><li>Weeattogether</li><li>Workshop</li><li>Yourexpo</li></ul><p>Graphic/Art Direction: Franz Goria</p>`,
